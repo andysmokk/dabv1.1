@@ -14,8 +14,6 @@ Node.js, MongoDB, Express
 
 Locally - http://localhost:3005
 
-render.com - /////
-
 FETCH - [mockapi.io](https://mockapi.io/)
 
 POST - [render.com]()
