@@ -15,7 +15,13 @@ const app = express();
 const formatsLogger = app.get("env") === "development" ? "dev" : "short";
 
 app.use(logger(formatsLogger));
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://delivery-app-i4x3.onrender.com",
+    methods: "GET, POST, PUT, DELETE",
+    allowedHeaders: "Content-Type",
+  })
+);
 app.use(express.json());
 
 app.use("/orders", orderRouter);
