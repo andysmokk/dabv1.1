@@ -24,11 +24,6 @@ app.use(
 );
 app.use(express.json());
 
-app.get("/shopping-cart", (req, res) => {
-  // Відправка відповіді на маршрут /shopping-cart
-  res.send("Shopping Cart Page");
-});
-
 app.use("/orders", orderRouter);
 
 app.use((req, res) => {
