@@ -17,7 +17,7 @@ const formatsLogger = app.get("env") === "development" ? "dev" : "short";
 app.use(logger(formatsLogger));
 app.use(
   cors({
-    origin: "https://delivery-app-i4x3.onrender.com",
+    origin: "https://delivery-app-v1.netlify.app/",
     methods: "GET, POST, PUT, DELETE",
     allowedHeaders: "Content-Type",
   })
