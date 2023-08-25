@@ -9,8 +9,10 @@ const createOrderValidation = async (req, res, next) => {
       phone: Joi.string().required(),
       address: Joi.string().required(),
     },
-    order: [Joi.array().min(1).required()],
-    totalPrice: Joi.number().integer(),
+    order: {
+      goods: [Joi.array().min(1).required()],
+      totalPrice: Joi.number().integer(),
+    },
   });
   try {
     await schema.validateAsync(req.body);
