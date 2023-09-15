@@ -10,7 +10,7 @@ const createOrder = async (req, res) => {
     return res.status(httpCode.CREATED).json({
       status: "successful",
       code: httpCode.CREATED,
-      data: order,
+      // data: order,
     });
   } catch (error) {
     throw new CustomError(httpCode.BAD_REQUEST, error.message);
